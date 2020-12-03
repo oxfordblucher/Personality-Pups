@@ -1,12 +1,14 @@
-DROP DATABASE IF EXISTS burgers_db;
+DROP DATABASE IF EXISTS PersonalityPupDB;
 
-CREATE DATABASE burgers_db;
+CREATE DATABASE PersonalityPupDB;
 
-USE burgers_db;
+USE PersonalityPupDB;
 
-CREATE TABLE burgers (
+CREATE TABLE users (
     id INT AUTO_INCREMENT NOT NULL,
-    burger_name VARCHAR(45) NOT NULL,
-    devoured BOOLEAN default false,
+    username VARCHAR(45) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    quizzed BOOLEAN default false,
+    personality VARCHAR(20),
     PRIMARY KEY(id)
 );
