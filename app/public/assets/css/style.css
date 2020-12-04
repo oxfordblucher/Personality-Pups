@@ -24,8 +24,14 @@ button{
 
 .image{
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .hide {
   display: none;
+}
+
+.match{
+  align-content: center;
+  padding-bottom: 50px;
 }
