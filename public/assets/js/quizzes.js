@@ -2,14 +2,14 @@
 $(function() {
   $(".eat-burger").on("click", function(event) {
     const id = $(this).data("id");
-    const devouredState = {
+    const answerPup = {
       devoured: true
     };
 
     // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
+    $.ajax("/api/quizzes/" + id, {
       type: "PUT",
-      data: devouredState
+      data: answerPup
     }).then(
       function() {
         // Reload the page to get the updated list
@@ -23,13 +23,13 @@ $(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    const newBurger = {
+    const newQuestion = {
       name: $("#bg").val().trim()
     };
     // Send the POST request.
-    $.ajax("/api/burgers", {
+    $.ajax("/api/quizzes", {
       type: "POST",
-      data: newBurger
+      data: newQuestion
     }).then(
       function() {
         // Reload the page to get the updated list
