@@ -40,8 +40,8 @@ const orm = {
         })
     },
 
-    updateOne: function(table, burgVals, condition, cb) {
-        const queryString = `UPDATE ${table} SET ${objToSql(burgVals)} WHERE ${condition}`;
+    updateOne: function(table, userVals, condition, cb) {
+        const queryString = `UPDATE ${table} SET ${objToSql(userVals)} WHERE ${condition}`;
         connection.query(queryString, function(err, res) {
             if(err) throw err;
             cb(res);
