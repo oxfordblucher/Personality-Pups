@@ -1,24 +1,22 @@
-const orm = require("../config/orm.js");
+const Sequelize = require("sequelize");
 
-const burger = {
-    selectAll: function(cb) {
-        orm.selectAll("users", function(res) {
-            cb(res);
-        });
-    },
-    
-    insertOne: function(col, name, cb) {
-        orm.insertOne("users", col, name, function(res) {
-            console.log(col),(name)
-            cb(res);
-        })
-    },
+const sequelize = require("../config/connection.js");
 
-    updateOne: function(userVals, condition, cb) {
-        orm.updateOne("users", userVals, condition, function(res) {
-            cb(res);
-        })
-    }
-}
+const User = sequelize.define("users", {
+    UserID: {type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true},
+    FirstName: {type: Sequelize.STRING},
+    LastName: {type: Sequelize.STRING},
+    Username: {type: Sequelize.STRING},
+    Password: {type: Sequelize.STRING, passportplaceholder},
+    Quizzed: {type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false},
+    Personality: {type: Sequelize.STRING, allowNull: true},
+    Dog1: {type: Sequelize.STRING, allowNull: true},
+    Dog2: {type: Sequelize.STRING, allowNull: true},
+    Dog3: {type: Sequelize.STRING, allowNull: true}
+},{
+    freezeTableName: true
+});
 
-module.exports = users;
+User.sync();
+
+module.exports = User;
