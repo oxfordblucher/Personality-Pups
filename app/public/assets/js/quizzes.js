@@ -1,9 +1,9 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".eat-burger").on("click", function(event) {
+  $(".answer-pup").on("click", function(event) {
     const id = $(this).data("id");
     const answerPup = {
-      devoured: true
+      Doggy: true
     };
 
     // Send the PUT request.
