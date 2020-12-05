@@ -1,16 +1,14 @@
 const db = require("../../models");
-const User = require("../models/users");
+const passport = require("../config/passport");
 
 module.exports = function(app) {
-    app.get("/api/all", function(req, res) {
-        
-    })
+
    
-    app.post("/api/signIn", passport.authenicate("local"), function(req, res) {
+    app.post("/api/index", passport.authenicate("local"), function(req, res) {
         res.json(req.user)
 
     });
-    app.post("/api/signIn", function(req, res) {
+    app.post("/api/index", function(req, res) {
         db.user.create({
             email: req.body.email,
             password: req.body.password
@@ -22,7 +20,7 @@ module.exports = function(app) {
         });
 
     })
-    app.get("/api/users", function(req,res) {
+    app.get("/api/users", function(req, res) {
         if(!req.user) {
             res.json({});
         }
@@ -32,9 +30,10 @@ module.exports = function(app) {
         });
     };
     });
-    app.get("/logout", function(req,res) {
+    app.get("/logout", function(req, res) {
         req.logout();
         res.redirect("/");
     })
+    
 
 }

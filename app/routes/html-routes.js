@@ -1,21 +1,37 @@
-const User = require("../models/users");
-const express = require
+const db = require("../../models");
+const path = require("path");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
-    app.get("/api/all", function(req, res) {
+    app.get("/", function(req, res) {
         if (req.user) {
-            res.redirect("/users")
+            res.redirect("/members")
         }
-        res.sendfile(path.join(__dirname, "..models/users.js"));
+        res.sendFile(path.join(__dirname, "..models/users.js"));
     });
-    app.get("/users", function(req, res) {
+    app.get("/signIn", function(req, res) {
         if (req.user) {
-            res.redirect("/users");
+            res.redirect("/members");
         }
-        res.sendfile(path.join(__dirname, "..models/users.js"))
+        res.sendFile(path.join(__dirname, "..models/users.js"))
     })
-    app.get("/users", isAuthenticated, function(req, res) {
-        res.sendfile(path.join(__dirname, "..models/users.js"));
+    app.get("/members", isAuthenticated, function(req, res) {
+        res.sendFile(path.join(__dirname, "..models/users.js"));
+    })
+app.post("/pups", function(req, res) {
+    db.quizzes.create({
+        quiz: req.body.pup,
+    }).then(function() {
+        res.sendFile(path.join(__dirname, "..models/users.js"));
     })
 
+})
+app.post("/results", function(req, res) {
+    db.quizzes.create({
+        result: req.body.results,
+
+    }).then(function (req, res) {
+        res.sendFile(path.join(__dirname, "..layouts/results.handlebars"));
+    })
+})
 };
