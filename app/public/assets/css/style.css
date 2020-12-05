@@ -1,20 +1,37 @@
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
+body{
+  background: #0ef5cf;
+}
+
+p {
+  padding: 5px;
+  margin: 5px;
+  color: rgb(13, 13, 94);
+  /* background: #bdd1f5; */
+}
+
+h1, h3{
+  text-align: center;
+  color: rgb(13, 13, 94);
+}
+
+/* #next-question{
+  text-align: center;
+} */
+
+button{
+  background: #0cc6cc;
+}
+
+.image{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+.match{
+  align-content: center;
+  padding-bottom: 50px;
+}
