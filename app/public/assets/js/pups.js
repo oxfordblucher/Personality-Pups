@@ -1,48 +1,10 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 // PUT request: NEEDS UPDATING
-$(function() {
-  $(".eat-burger").on("click", function(event) {
-    const id = $(this).data("id");
-    const answerPup = {
-      devoured: true
-    };
-
-    // Send the PUT request.
-    $.ajax("/api/quizzes/" + id, {
-      type: "PUT",
-      data: answerPup
-    }).then(
-      function() {
-        // Reload the page to get the updated list
-        location.reload();
-
-      }
-    );
-  });
 
   // POST request: NEEDS UPDATING...?
   // set up an on click event connected to the submit button...
   // ..that does a create to push the users answer array
-  $(".submit").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
 
-    const newResults = {
-      name: $("#results").val().trim()
-    };
-    // Send the POST request.
-    $.ajax("/api/pups", {
-      type: "POST",
-      data: newResults
-    }).then(
-      function() {
-        // Reload the page to get the updated list
-        location.reload();
-
-      }
-    );
-  });
-});
 
 // set up an on click event with next question that pushes the answer to the array
 
@@ -66,124 +28,256 @@ userAnswer = []
 var questions = [
       {
           question: "You are sleeping next to your partner and they are taking up two thirds of the space, you...",
-          options: [
-            {
-            optionA: "closer the better! Who needs space?", 
-            optionB: "grumpily push them over, it's so inconsiderate of your needs!",
-            optionC: "It's not ideal but you make it work!"
+          options: [{
+            optionA: [{
+              name:"closer the better! Who needs space?",
+              keys: all
+            }],
+            optionB: [{
+              name: "grumpily push them over, it's so inconsiderate of your needs!",
+              keys: [4,5,7,10,11,12,13,16,18,20,21,22,24,25]
+            }],
+            optionC: [{
+              name: "It's not ideal but you make it work!",
+              keys: [1,3,4,5,7,8,9,10,11,12,13,14,15,16,18,20,21,22,24,25]
             }]
+          }]
       },
        {
           question: "the check comes to the table, do you...",
-          options: [
-            {
-            optionA: "jump at the offer to pay the bill?", 
-            optionB: "pull up your calculator app, let's split it!",
-            optionC: "Let everyone know that you only got a salad and don't want to split"
+          options: [{
+            optionA: [{
+              name: "jump at the offer to pay the bill?", 
+              keys: all
+            }],
+            optionB: [{
+              name: "pull up your calculator app, let's split it!",
+              keys: [1,3,9,10,13,14,15,18,20,21,22,25]
+            }],
+            optionC: [{
+              name: "Let everyone know that you only got a salad and don't want to split",
+              keys: [7,12,24]
             }]
       },
        {
           question: "It is 10am on Saturday morning, your day begins with...",
           options: [{
-            optionA: "It began at 5am, I am already halfway through my errands!", 
-            optionB: "smash that snooze button!",
-            optionC: "I've had a cup of coffee and am reading the paper"
+            optionA: [{
+              name: "It began at 5am, I am already halfway through my errands!", 
+              keys: [13,15,21]
+            }],
+            optionB: [{
+              name: "smash that snooze button!",
+              keys: [4,5,11,12,16,20,22,23]
+            }],
+            optionC: [{
+              name: "I've had a cup of coffee and am reading the paper",
+              keys: [1,2,3,6,7,8,9,10,14,17,18,19,24,25]
+            }],
           }]
       },
         {
           question: "Your friend spilled red wine on your carpet, you...",
           options: [{
-            optionA: "It's fine, the rug is old and I'll just hide that corner under the couch!", 
-            optionB: "I've already called the carpet cleaner and sent my friend a copy of the bill",
-            optionC: "I think I've got a stain stick somewhere, or some club soda?"
+            optionA: [{
+              name:  "It's fine, the rug is old and I'll just hide that corner under the couch!",
+              keys: all
+            }],
+            optionB: [{
+              name: "I've already called the carpet cleaner and sent my friend a copy of the bill",
+              keys: [4,6,7,9,11,12,14,18,19,20,21,22,24]
+            }],
+            optionC: [{
+              name: "I think I've got a stain stick somewhere, or some club soda?",
+              keys: [1,4,5,6,7,8,9,10,11,12,14,17,18,19,20,21,22,24]
+            }]
           }]
       },
         {
           question: "You meet someone for the first time at a party and your friend thinks they were unfriendly...",
           options: [{
-            optionA: "Totally, such bad vibes", 
-            optionB: "Maybe? We did just meet, some people don't give great first impressions",
-            optionC: "I am sure they were just shy! I'd love to talk to them more, I am sure there is a reason they got invited!"
+            optionA: [{
+              name: "Totally, such bad vibes",
+              keys: [1,3,4,5,6,10,12,13,14,16,17,19,20,22,23,24,25]
+            }], 
+            optionB: [{
+              name: "Maybe? We did just meet, some people don't give great first impressions",
+              keys: [2,7,11,18,21,]
+            }],
+            optionC: [{
+              name: "I am sure they were just shy! I'd love to talk to them more, I am sure there is a reason they got invited!",
+              keys: all
+            }]
           }]
       },
         {
           question: "You're headed to the airport, where is your passport?",
           options: [{
-            optionA: "somewhere in my bag, oh whoops it's unzipped!", 
-            optionB: "in my pocket, easily accessible for going through security",
-            optionC: "in a hidden pouch attached to my body, there are pick-pockets you know!"
+            optionA: [{
+              name: "somewhere in my bag, oh whoops it's unzipped!",
+              keys: all
+            }], 
+            optionB: [{
+              name: "in my pocket, easily accessible for going through security",
+              keys: [1,2,3,6,8,9,14,15,17,19,23]
+            }],
+            optionC: [{
+              name:"in a hidden pouch attached to my body, there are pick-pockets you know!",
+              keys: [2,8,9,15,19]
+            }]
           }]
       },
         {
           question: "You find out your teacher has a favorite student, you...",
           options: [{
-            optionA: "think that is unfair, all students should be treated equally", 
-            optionB: "I guess that is an inevitability, they are human after all, and not all students produce the same work",
-            optionC: "hope it is you, it'll be SO dissapointing if it isn't you"
+            optionA: [{
+              name: "think that is unfair, all students should be treated equally",
+              keys: [2,6,8,10,11,13,16,18,19,20,21,22,23,24]
+            }], 
+            optionB: [{
+              name: "I guess that is an inevitability, they are human after all, and not all students produce the same work",
+              keys: all
+            }],
+            optionC: [{
+              name: "hope it is you, it'll be SO dissapointing if it isn't you",
+              keys: [2,6,8,10,11,13,16,18,19,20,21,22,23,24]
+            }]
           }]
       },
         {
           question: "You have two friends that are in a fight, you: a. make plans with them separately, you hope they work it out but it isn't your job to manage their relationship",
           options: [{
-            optionA: "make plans with them separately, you hope they work it out but it isn't your job to manage their relationship",
-            optionB: "Invite them over to mediate, can't we all get along?", 
-            optionC: "Invite the friend you have a stronger relationship with over. You hate drama"
+            optionA: [{
+              name: "make plans with them separately, you hope they work it out but it isn't your job to manage their relationship",
+              keys: []
+            }],
+            optionB: [{
+              name: "Invite them over to mediate, can't we all get along?",
+              keys: all
+            }], 
+            optionC: [{
+              name: "Invite the friend you have a stronger relationship with over. You hate drama",
+              keys: []
+            }]
           }]
       },
         {
           question: "Your car needs an expensive fix to pass inspection, you...",
           options: [{
-            optionA: "are glad you have an emergency fund just for this type of occassion!", 
-            optionB: "Weigh your options, the car does have a lot of miles? Should you just sell it?",
-            optionC: "I am a student, I don't have that kind of money! Back to the bus I suppose..."
+            optionA: [{
+              name: "are glad you have an emergency fund just for this type of occassion!",
+              keys: all
+            }], 
+            optionB: [{
+              name: "Weigh your options, the car does have a lot of miles? Should you just sell it?",
+              keys: []
+            }],
+            optionC: [{
+              name: "I am a student, I don't have that kind of money! Back to the bus I suppose...",
+              keys: []
+            }]
           }]
       },
         {
           question: "You show up to your cousin's wedding and your friend is wearing the exact same jumpsuit, you...",
           options: [{
-            optionA: "love it! Let's get a picture together!",
-            optionB: "Turn right around, you packed another outfit just in case", 
-            optionC: "Who cares? You love the outfit and it looks great on you, where's the dance floor??"
+            optionA: [{
+              name: "love it! Let's get a picture together!",
+              keys: []
+            }],
+            optionB: [{
+              name: "Turn right around, you packed another outfit just in case",
+              keys: []
+            }], 
+            optionC: [{
+              name: "Who cares? You love the outfit and it looks great on you, where's the dance floor??",
+              keys: []
+            }]
           }]
       },
         {
           question: "You're looking for a house to buy and your realtor suggests a home close to train tracks, you think...",
           options: [{
-            optionA: "Deal breaker, I'm a light sleeper as it is, plus I work from home!",
-            optionB: "It is a beautiful home, I am sure you adapt to the sounds over time, let's see it!", 
-            optionC: "Just how close is it...?"
+            optionA: [{
+              name: "Deal breaker, I'm a light sleeper as it is, plus I work from home!",
+              keys: []
+            }],
+            optionB: [{
+              name: "It is a beautiful home, I am sure you adapt to the sounds over time, let's see it!",
+              keys: []
+            }], 
+            optionC: [{
+              name: "Just how close is it...?",
+              keys: []
+            }]
           }]
       },
         {
           question: "Your friend joined a new gym and is trying to get you to join with her, you say...",
           options: [{
-            optionA: "Definitely! It'll be great to workout with a friend",
-            optionB: "No thank you. I don't need to pay for something I won't use", 
-            optionC: "Maybe. You already belong to a gym and frequent several studios to diverisfy my weekly workout regimine, but what do they offer?"
+            optionA: [{
+              name: "Definitely! It'll be great to workout with a friend",
+              keys: []
+            }],
+            optionB: [{
+              name: "No thank you. I don't need to pay for something I won't use",
+              keys: []
+            }], 
+            optionC: [{
+              name: "Maybe. You already belong to a gym and frequent several studios to diverisfy my weekly workout regimine, but what do they offer?",
+              keys: []
+            }]
           }]
       },
         {
           question: "Your idea of grocery shopping with your partner looks like:",
           options: [{
-            optionA: "divide up, let's make this errand go by quickly!",
-            optionB: "Slowly go through the aisles and look for inspiration, hey look at how good these apples look!", 
-            optionC: ""
+            optionA: [{
+              name: "Divide and conquer, let's make this errand go by quickly!",
+              keys: []
+            }],
+            optionB: [{
+              name: "Slowly go through the aisles and look for inspiration, hey look at how good these apples look!",
+              keys: []
+            }], 
+            optionC: [{
+              name: "",
+              keys: []
+            }]
           }]
       },
         {
-          question: "Your nephew is at an inquisitive age and has locked his attention and questions in on you. You respond with",
+          question: "Your nephew is at an inquisitive age and has locked his attention and questions in on you. Your response:",
           options: [{
-            optionA: "Hey buddy, where are your parents? You're not interested in entertaining him",
-            optionB: " thoughtfully answering all of his questions and marvelling to yourself about how interesting his thought process is at that age", 
-            optionC: "hang out for a bit with him and have fun but eventually distract him with a new activity and make your escape"
+            optionA: [{
+              name: "Hey buddy, where are your parents? You're not interested in entertaining him",
+              keys: []
+            }],
+            optionB: [{
+              name: "Thoughtfully answering all of his questions and marvelling to yourself about how interesting his thought process is at that age",
+              keys: []
+            }], 
+            optionC: [{
+              name: "Hang out for a bit with him and have fun but eventually distract him with a new activity and make your escape",
+              keys: []
+            }]
           }]
       },
         {
           question: "You got an amazing job offer in another city, which means leaving your best friend and wonderful apartment behind, you...",
           options: [{
-            optionA: "Accept the offer, you'll miss your friend and the life you built but there are new relationships and life experiencing awaiting you, that's life",
-            optionB: "Look for opportunities in your city, great friendships like this aren't worth leaving behind!", 
-            optionC: "Weigh your options, you have to look at the bigger picture here! "
+            optionA: [{
+              name: "Accept the offer, you'll miss your friend and the life you built but there are new relationships and life experiencing awaiting you, that's life",
+              keys: []
+            }],
+            optionB: [{
+              name: "Look for opportunities in your city, great friendships like this aren't worth leaving behind!",
+              keys: []
+            }], 
+            optionC: [{
+              name: "Weigh your options, you have to look at the bigger picture here!",
+              keys: []
+            }]
           }]
       },
   ]; 
