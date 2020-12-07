@@ -192,102 +192,102 @@ var questions = [
 var dogs = [
       {
           breed: "Labrador Retriever",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 1
       },
        {
           breed: "German Shepherd",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 2
       },
        {
           breed: "Golden Retriever",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 3
       },
        {
           breed: "French Bulldog",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 4
       },
        {
           breed: "English Bulldog",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 5
       },
        {
           breed: "Poodle",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 6
       },
        {
           breed: "Beagle",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 7
       },
        {
           breed: "Rottweiler",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 8
       },
        {
           breed: "German Shorthaired Pointer",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 9
       },
        {
           breed: "Pembroke Welsh Corgi",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 10
       },
        {
           breed: "Dachshund",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 11
       },
        {
           breed: "Yorkshire Terrier",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 12
       },
        {
           breed: "Australian Shepherd",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 13
       },
        {
           breed: "Boxer",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 14
       },
        {
           breed: "Siberian Husky",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 15
       },
        {
           breed: "Cavalier King Charles Spaniel",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 16
       },
        {
           breed: "Great Dane",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 17
       },
        {
           breed: "Miniature Schnauzer",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 18
       },
        {
           breed: "Doberman Pinscher",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 19
       },
        {
           breed: "Shih Tzu",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 20
       },
        {
           breed: "Boston Terrier",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 21
       },
        {
           breed: "Havanese",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 22
       },
        {
           breed: "Bernese Mountain Dog",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 23
       },
        {
           breed: "Pomeranian",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 24
       },
        {
           breed: "Shetland Sheepdog",
-          answers: [ "a || c", "a || b", "c", "a || c", "a || b", "b", "b", "a || b", "a || c", "b || c", "a", "b", "b", "a || c"]
+          answerKey: 25
       },
   ]; 
