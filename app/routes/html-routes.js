@@ -1,4 +1,4 @@
-const db = require("../../models");
+const db = require("../models/index");
 const path = require("path");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
