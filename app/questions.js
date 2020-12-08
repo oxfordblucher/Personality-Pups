@@ -111,7 +111,7 @@ module.exports = {
                 }, 
                 optionB: {
                     name: "Maybe? We did just meet, some people don't give great first impressions",
-                    keys: [2,7,11,18,21,]
+                    keys: [2,7,11,18,21]
                 },
                 optionC: {
                     name: "I am sure they were just shy! I'd love to talk to them more, I am sure there is a reason they got invited!",
