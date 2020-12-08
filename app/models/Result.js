@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Result = sequelize.define("Results", {
+    const Result = sequelize.define("Result", {
         labrador: {
             type: DataTypes.INTEGER,
             allowNull: false,

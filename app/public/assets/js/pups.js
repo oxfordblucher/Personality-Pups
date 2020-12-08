@@ -5,7 +5,6 @@
   // set up an on click event connected to the submit button...
   // ..that does a create to push the users answer array
 
-
 // set up an on click event with next question that pushes the answer to the array
 
 
@@ -21,11 +20,45 @@
 //   7. add on-click events for answer and next question? and hiding last question?  
 
 // Users answer array
-userAnswer = []
 
-
+module.exports = {
+  questions:[{
+    question: "You are sleeping next to your partner and they are taking up two thirds of the space, you...",
+    options: {
+      optionA: {
+        name:"closer the better! Who needs space?",
+        keys: "all"
+      },
+      optionB: {
+        name: "grumpily push them over, it's so inconsiderate of your needs!",
+        keys: [4,5,7,10,11,12,13,16,18,20,21,22,24,25]
+      },
+      optionC: {
+        name: "It's not ideal but you make it work!",
+        keys: [1,3,4,5,7,8,9,10,11,12,13,14,15,16,18,20,21,22,24,25]
+      }
+    }
+  },
+  {
+    question: "the check comes to the table, do you...",
+    options: {
+      optionA: {
+        name: "jump at the offer to pay the bill?", 
+        keys: "all"
+      },
+      optionB: {
+        name: "pull up your calculator app, let's split it!",
+        keys: [1,3,9,10,13,14,15,18,20,21,22,25]
+      },
+      optionC: {
+        name: "Let everyone know that you only got a salad and don't want to split",
+        keys: [7,12,24]
+      }
+    }
+  }]
+};
 // questions and answer options array 
-var questions = [
+/* var qs = [
       {
           question: "You are sleeping next to your partner and they are taking up two thirds of the space, you...",
           options: [{
@@ -130,18 +163,18 @@ var questions = [
         {
           question: "You find out your teacher has a favorite student, you...",
           options: [{
-            optionA: [{
+            optionA: {
               name: "think that is unfair, all students should be treated equally",
               keys: [2,6,8,10,11,13,16,18,19,20,21,22,23,24]
-            }], 
-            optionB: [{
+            }, 
+            optionB: {
               name: "I guess that is an inevitability, they are human after all, and not all students produce the same work",
               keys: all
-            }],
-            optionC: [{
+            },
+            optionC: {
               name: "hope it is you, it'll be SO dissapointing if it isn't you",
               keys: [2,6,8,10,11,13,16,18,19,20,21,22,23,24]
-            }]
+            }
           }]
       },
         {
@@ -279,11 +312,11 @@ var questions = [
               keys: []
             }]
           }]
-      },
-  ]; 
+      }
+];  */
 
 // Dog breed and corresponding answers array
-var dogs = [
+/* var dogs = [
       {
           breed: "Labrador Retriever",
           answerKey: 1
@@ -385,3 +418,4 @@ var dogs = [
           answerKey: 25
       },
   ]; 
+ */
