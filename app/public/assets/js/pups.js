@@ -19,22 +19,130 @@
 //       -- we store in the DB the quiz results for the user 
 //   7. add on-click events for answer and next question? and hiding last question?  
 
-// Users answer array
 
+$(function() {
 
-var dogApiKey = "";
-var dogBreed = "";
-var queryURL ="";
+//add on-click event
+//store answers in an array - global scale outside of function
+// push into the array with every answer selected
+// upon final answer submission post request to back end w/ an object that has an array of the answers 
+//backend inside post route figure out top three breeds
+//send three breeds back to front end as a response results html page
+//then call the query to get the images of the results (loop over)
 
-// Performing our AJAX GET request
-    $.ajax({
-    url: queryURL,
-    method: "GET",
-    })
-    // After the data comes back from the API
-    .then(function (response) {
-        // Storing an array of results in the results variable
-        var results = response.DogBreed;
+  var queryURL ="";
+
+  // Performing our AJAX GET request
+      $.ajax({
+      url: queryURL,
+      method: "GET",
+      })
+      // After the data comes back from the API
+      .then(function (response) {
+          // Storing an array of results in the results variable
+          // var results = response.dog;
+          if (results == 0) {
+            queryURL = "https://dog.ceo/api/breed/labrador/images/random"
+          }; 
+          
+          if (results == 1) {
+            queryURL = "https://dog.ceo/api/breed/germanshepherd/images/random"
+          }; 
+          
+          if (results == 2) {
+            queryURL = "https://dog.ceo/api/breed/retriever/golden/images/random"
+          }; 
+          
+          if (results == 3) {
+            queryURL = "https://dog.ceo/api/breed/bulldog/french/images/random"
+          }; 
+          
+          if (results == 4) {
+            queryURL = "https://dog.ceo/api/breed/bulldog/english/images/random"
+          }; 
+          
+          if (results == 5) {
+            queryURL = "https://dog.ceo/api/breed/poodle/standard/images/random"
+          }; 
+          
+          if (results == 6) {
+            queryURL = "https://dog.ceo/api/breed/beagle/images/random"
+          }; 
+          
+          if (results == 7) {
+            queryURL = "https://dog.ceo/api/breed/rottweiler/images/random"
+          }; 
+          
+          if (results == 8) {
+            queryURL = "https://dog.ceo/api/breed/pointer/german/images/random"
+          }; 
+          
+          if (results == 9) {
+            queryURL = "https://dog.ceo/api/breed/corgi/cardigan/images/random"
+          }; 
+          
+          if (results == 10) {
+            queryURL = "https://dog.ceo/api/breed/dachshund/images/random"
+          }; 
+          
+          if (results == 11) {
+            queryURL = "https://dog.ceo/api/breed/terrier/yorkshire/images/random"
+          }; 
+          
+          if (results == 12) {
+            queryURL = "https://dog.ceo/api/breed/australian/shepherd/images/random"
+          }; 
+          
+          if (results == 13) {
+            queryURL = "https://dog.ceo/api/breed/boxer/images/random"
+          }; 
+          
+          if (results == 14) {
+            queryURL = "https://dog.ceo/api/breed/husky/images/random"
+          }; 
+          
+          if (results == 15) {
+            queryURL = "https://dog.ceo/api/breed/spaniel/images/random"
+          }; 
+          
+          if (results == 16) {
+            queryURL = "https://dog.ceo/api/breed/dane/great/images/random"
+          }; 
+          
+          if (results == 17) {
+            queryURL = "https://dog.ceo/api/breed/schnauzer/miniature/images/random"
+          }; 
+          
+          if (results == 18) {
+            queryURL = "https://dog.ceo/api/breed/doberman/images/random"
+          }; 
+          
+          if (results == 19) {
+            queryURL = "https://dog.ceo/api/breed/shihtzu/images/random"
+          }; 
+          
+          if (results == 20) {
+            queryURL = "https://dog.ceo/api/breed/terrier/boston/images/random"
+          }; 
+          
+          if (results == 21) {
+            queryURL = "https://dog.ceo/api/breed/havanese/images/random"
+          }; 
+          
+          if (results == 22) {
+            queryURL = "https://dog.ceo/api/breed/mountain/bernese/images/random"
+          }; 
+          
+          if (results == 23) {
+            queryURL = "https://dog.ceo/api/breed/pomeranian/images/random"
+          }; 
+          
+          if (results == 24) {
+            queryURL = "https://dog.ceo/api/breed/sheepdog/shetland/images/random"
+          }; 
+        });
+});
+
 
 // Dog breed and corresponding answers array
 /* var dogs = [
