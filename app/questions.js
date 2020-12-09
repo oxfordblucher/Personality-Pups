@@ -111,7 +111,11 @@ module.exports = {
                 }, 
                 optionB: {
                     name: "Maybe? We did just meet, some people don't give great first impressions",
+<<<<<<< HEAD
                     keys: [2,7,11,18,21,]
+=======
+                    keys: [2,7,11,18,21]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 },
                 optionC: {
                     name: "I am sure they were just shy! I'd love to talk to them more, I am sure there is a reason they got invited!",
@@ -158,7 +162,11 @@ module.exports = {
             options: {
                 optionA: {
                     name: "make plans with them separately, you hope they work it out but it isn't your job to manage their relationship",
+<<<<<<< HEAD
                     keys: []
+=======
+                    keys: [2,8,9,11,15,19,25]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 },
                 optionB: {
                     name: "Invite them over to mediate, can't we all get along?",
@@ -166,7 +174,11 @@ module.exports = {
                 }, 
                 optionC: {
                     name: "Invite the friend you have a stronger relationship with over. You hate drama",
+<<<<<<< HEAD
                     keys: []
+=======
+                    keys: [8,15,19]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }
             }
         },
@@ -179,11 +191,19 @@ module.exports = {
                 }, 
                 optionB: {
                     name: "Weigh your options, the car does have a lot of miles? Should you just sell it?",
+<<<<<<< HEAD
                     keys: []
                 },
                 optionC: {
                     name: "I am a student, I don't have that kind of money! Back to the bus I suppose...",
                     keys: []
+=======
+                    keys: [1,3,4,5,6,7,12,13,14,16,19,20,23,25]
+                },
+                optionC: {
+                    name: "I am a student, I don't have that kind of money! Back to the bus I suppose...",
+                    keys: [8,9,10,15,18,22,24]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }
             }
         },
@@ -192,6 +212,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "love it! Let's get a picture together!",
+<<<<<<< HEAD
                     keys: []
                 },
                 optionB: {
@@ -201,6 +222,17 @@ module.exports = {
                 optionC: {
                     name: "Who cares? You love the outfit and it looks great on you, where's the dance floor??",
                     keys: []
+=======
+                    keys: "all"
+                },
+                optionB: {
+                    name: "Turn right around, you packed another outfit just in case",
+                    keys: [4,5,8,9,10,16,18,19,20,22,23,25]
+                }, 
+                optionC: {
+                    name: "Who cares? You love the outfit and it looks great on you, where's the dance floor??",
+                    keys: "all"
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }
             }
         },
@@ -209,6 +241,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "Deal breaker, I'm a light sleeper as it is, plus I work from home!",
+<<<<<<< HEAD
                     keys: []
                 },
                 optionB: {
@@ -218,6 +251,17 @@ module.exports = {
                 optionC: {
                     name: "Just how close is it...?",
                     keys: []
+=======
+                    keys: [4,5,9,13,16,20,22,23]
+                },
+                optionB: {
+                    name: "It is a beautiful home, I am sure I'll adapt to the sounds over time, let's see it!",
+                    keys: "all"
+                }, 
+                optionC: {
+                    name: "Just how close is it...?",
+                    keys: [1,6,10,11,12,14,15,17,25]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }
             }
         },
@@ -226,6 +270,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "Definitely! It'll be great to workout with a friend",
+<<<<<<< HEAD
                     keys: []
                 },
                 optionB: {
@@ -235,6 +280,17 @@ module.exports = {
                 optionC: {
                     name: "Maybe. You already belong to a gym and frequent several studios to diverisfy my weekly workout regimine, but what do they offer?",
                     keys: []
+=======
+                    keys: [1,2,3,8,10,14,19,21]
+                },
+                optionB: {
+                    name: "No thank you. I don't need to pay for something I won't use",
+                    keys: [4,5,7,11,12,16,17,18,20,22,23,24]
+                }, 
+                optionC: {
+                    name: "Maybe. You already belong to a gym and frequent several studios to diverisfy my weekly workout regimine, but what do they offer?",
+                    keys: [6,9,13,15,25]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }
             }
         },
@@ -243,11 +299,19 @@ module.exports = {
             options: {
                 optionA: {
                     name: "Divide and conquer, let's make this errand go by quickly!",
+<<<<<<< HEAD
                     keys: []
                 },
                 optionB: {
                     name: "Slowly go through the aisles and look for inspiration, hey look at how good these apples look!",
                     keys: []
+=======
+                    keys: [7,8,13,15,19,21]
+                },
+                optionB: {
+                    name: "Slowly go through the aisles and look for inspiration, hey look at how good these apples look!",
+                    keys: [1,2,3,4,5,6,9,10,11,12,14,16,17,18,20,22,23,24,25]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }, 
                 optionC: {
                     name: "",
@@ -260,6 +324,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "Hey buddy, where are your parents? You're not interested in entertaining him",
+<<<<<<< HEAD
                     keys: []
                 },
                 optionB: {
@@ -269,6 +334,17 @@ module.exports = {
                 optionC: {
                     name: "Hang out for a bit with him and have fun but eventually distract him with a new activity and make your escape",
                     keys: []
+=======
+                    keys: [4,5,7]
+                },
+                optionB: {
+                    name: "Thoughtfully answering all of his questions and marvelling to yourself about how interesting his thought process is at that age",
+                    keys: [1,2,3,6,8,9,13,19,25]
+                }, 
+                optionC: {
+                    name: "Hang out for a bit with him and have fun but eventually distract him with a new activity and make your escape",
+                    keys: [10,11,12,14,15,16,17,18,20,21,22,23,24]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }
             }
         },
@@ -277,6 +353,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "Accept the offer, you'll miss your friend and the life you built but there are new relationships and life experiencing awaiting you, that's life",
+<<<<<<< HEAD
                     keys: []
                 },
                 optionB: {
@@ -286,8 +363,23 @@ module.exports = {
                 optionC: {
                     name: "Weigh your options, you have to look at the bigger picture here!",
                     keys: []
+=======
+                    keys: "all"
+                },
+                optionB: {
+                    name: "Look for opportunities in your city, great friendships like this aren't worth leaving behind!",
+                    keys: [7,11,12,16,18,20,21,22,24]
+                }, 
+                optionC: {
+                    name: "Weigh your options, you have to look at the bigger picture here!",
+                    keys: [1,2,3,4,5,6,8,9,10,13,14,15,17,19,23,25]
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d
                 }
             }
         }
     ]
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 0fd4a360b024f9b3d008d5198f6edb17b381712d

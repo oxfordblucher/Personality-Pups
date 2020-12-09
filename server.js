@@ -2,6 +2,7 @@
 // Server.js - This file is the initial starting point for the Node/Express server.
 // *********************************************************************************
 require('dotenv').config();
+const path = require("path");
 
 // Dependencies
 // =============================================================
@@ -18,6 +19,8 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("app/public"));
+
+app.set('views', path.join(__dirname, '/app/views'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
