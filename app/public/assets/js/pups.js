@@ -22,6 +22,20 @@
 // Users answer array
 
 
+var dogApiKey = "";
+var dogBreed = "";
+var queryURL ="";
+
+// Performing our AJAX GET request
+    $.ajax({
+    url: queryURL,
+    method: "GET",
+    })
+    // After the data comes back from the API
+    .then(function (response) {
+        // Storing an array of results in the results variable
+        var results = response.DogBreed;
+
 // Dog breed and corresponding answers array
 /* var dogs = [
       {
