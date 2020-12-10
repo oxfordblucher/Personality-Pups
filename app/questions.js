@@ -35,40 +35,6 @@ module.exports = {
             }
         },
         {
-            question: "You are sleeping next to your partner and they are taking up two thirds of the space, you...",
-                options: {
-                    optionA: {
-                        name:"closer the better! Who needs space?",
-                        keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
-                    },
-                    optionB: {
-                        name: "grumpily push them over, it's so inconsiderate of your needs!",
-                        keys: [4,5,7,10,11,12,13,16,18,20,21,22,24,25]
-                    },
-                    optionC: {
-                        name: "It's not ideal but you make it work!",
-                        keys: [1,3,4,5,7,8,9,10,11,12,13,14,15,16,18,20,21,22,24,25]
-                    }
-                }
-        },
-        {
-            question: "the check comes to the table, do you...",
-            options: {
-                optionA: {
-                    name: "jump at the offer to pay the bill?", 
-                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
-                },
-                optionB: {
-                    name: "pull up your calculator app, let's split it!",
-                    keys: [1,3,9,10,13,14,15,18,20,21,22,25]
-                },
-                optionC: {
-                    name: "Let everyone know that you only got a salad and don't want to split",
-                    keys: [7,12,24]
-                }
-            }
-        },
-        {
             question: "It is 10am on Saturday morning, your day begins with...",
             options: {
                 optionA: {

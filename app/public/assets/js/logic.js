@@ -13,6 +13,7 @@ function answerQ(data) {
     if (nextQ < 15) {
         window.location.replace(`/question/${nextQ}`);
     } else {
+        calculateResult();
         window.location.replace('/result');
     }
 };
@@ -22,7 +23,19 @@ function saveLocally(data) {
 
     const allAnswrs = keyArray.concat(data);
 
-    console.log(allAnswrs);
-
     localStorage.setItem('pupQuiz', JSON.stringify(allAnswrs));
+}
+
+function calculateResult() {
+    keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || [];
+    let counts = keyArray.reduce((map, key) => {
+        map[key] = (map[key] || 0) + 1;
+        return map;
+    }, {});
+
+    let sorted = Object.keys(counts).sort((a,b) => counts[b] - counts[a]);
+
+    let top3 = sorted.slice(0, 3);
+
+    localStorage.setItem('suggestedPups', JSON.stringify(top3));
 }
