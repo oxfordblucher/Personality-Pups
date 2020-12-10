@@ -8,9 +8,9 @@
     <div id="quiz">
       <div class="col-sm" id={{id}}>
         <h3>{{question}}:</h3>
-        <button type="submit" onclick="answerQ({{json this}})" id = {{optionA.keys}}>A: <p>{{optionA.name}}</p></button>
-        <button type="submit" onclick="answerQ({{json this}})" id = {{optionB.keys}}>B: <p>{{optionB.name}}</p></button>
-        <button type="submit" onclick="answerQ({{json this}})" id = {{optionC.keys}}>C: <p>{{optionC.name}}</p></button>
+        <button type="submit" onclick="answerQ({{json this.optionA}})" id = {{optionA.keys}}>A: <p>{{optionA.name}}</p></button>
+        <button type="submit" onclick="answerQ({{json this.optionB}})" id = {{optionB.keys}}>B: <p>{{optionB.name}}</p></button>
+        <button type="submit" onclick="answerQ({{json this.optionC}})" id = {{optionC.keys}}>C: <p>{{optionC.name}}</p></button>
       </div>
     </div>
   </div>
