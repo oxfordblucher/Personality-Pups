@@ -1,7 +1,8 @@
 const db = require("../models/index");
 const path = require("path");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-const questions = require("../questions")
+const questions = require("../questions");
+const dogPics = require("../dogpics");
 
 module.exports = function(app) {
     
