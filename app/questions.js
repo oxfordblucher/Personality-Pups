@@ -5,7 +5,7 @@ module.exports = {
             options: {
                 optionA: {
                     name:"closer the better! Who needs space?",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 },
                 optionB: {
                     name: "grumpily push them over, it's so inconsiderate of your needs!",
@@ -22,7 +22,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "jump at the offer to pay the bill?", 
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 },
                 optionB: {
                     name: "pull up your calculator app, let's split it!",
@@ -39,7 +39,7 @@ module.exports = {
                 options: {
                     optionA: {
                         name:"closer the better! Who needs space?",
-                        keys: "all"
+                        keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                     },
                     optionB: {
                         name: "grumpily push them over, it's so inconsiderate of your needs!",
@@ -56,7 +56,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "jump at the offer to pay the bill?", 
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 },
                 optionB: {
                     name: "pull up your calculator app, let's split it!",
@@ -90,7 +90,7 @@ module.exports = {
             options: {
                 optionA: {
                     name:  "It's fine, the rug is old and I'll just hide that corner under the couch!",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 },
                 optionB: {
                     name: "I've already called the carpet cleaner and sent my friend a copy of the bill",
@@ -115,7 +115,7 @@ module.exports = {
                 },
                 optionC: {
                     name: "I am sure they were just shy! I'd love to talk to them more, I am sure there is a reason they got invited!",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 }
             }
         },
@@ -124,7 +124,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "somewhere in my bag, oh whoops it's unzipped!",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 }, 
                 optionB: {
                     name: "in my pocket, easily accessible for going through security",
@@ -145,7 +145,7 @@ module.exports = {
                 }, 
                 optionB: {
                     name: "I guess that is an inevitability, they are human after all, and not all students produce the same work",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 },
                 optionC: {
                     name: "hope it is you, it'll be SO dissapointing if it isn't you",
@@ -162,7 +162,7 @@ module.exports = {
                 },
                 optionB: {
                     name: "Invite them over to mediate, can't we all get along?",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 }, 
                 optionC: {
                     name: "Invite the friend you have a stronger relationship with over. You hate drama",
@@ -175,7 +175,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "are glad you have an emergency fund just for this type of occassion!",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 }, 
                 optionB: {
                     name: "Weigh your options, the car does have a lot of miles? Should you just sell it?",
@@ -192,7 +192,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "love it! Let's get a picture together!",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 },
                 optionB: {
                     name: "Turn right around, you packed another outfit just in case",
@@ -200,7 +200,7 @@ module.exports = {
                 }, 
                 optionC: {
                     name: "Who cares? You love the outfit and it looks great on you, where's the dance floor??",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 }
             }
         },
@@ -213,7 +213,7 @@ module.exports = {
                 },
                 optionB: {
                     name: "It is a beautiful home, I am sure I'll adapt to the sounds over time, let's see it!",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 }, 
                 optionC: {
                     name: "Just how close is it...?",
@@ -251,7 +251,7 @@ module.exports = {
                 }, 
                 optionC: {
                     name: "",
-                    keys: []
+                    keys: [1,2,3,4,5,6,9,10,11,12,14,16,17,18,20,22,23,24,25]
                 }
             }
         },
@@ -277,7 +277,7 @@ module.exports = {
             options: {
                 optionA: {
                     name: "Accept the offer, you'll miss your friend and the life you built but there are new relationships and life experiencing awaiting you, that's life",
-                    keys: "all"
+                    keys: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
                 },
                 optionB: {
                     name: "Look for opportunities in your city, great friendships like this aren't worth leaving behind!",
