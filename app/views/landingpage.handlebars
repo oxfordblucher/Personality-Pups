@@ -1,0 +1,47 @@
+<main>
+    <!-- Landing page header -->
+    <header>
+
+    <!-- Start sticky Navbar -->
+
+    <nav class="navbar sticky-top navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <p>Already a member?</p>
+            </a>
+            <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Email" id="email-input" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Password" id="password-input" aria-label="Search">
+            <button class="btn btn-outline-* loginButton" type="submit" id="logIn" onclick="logIn()" onclick="answerQ({{json this}})" >Login</button>
+            <p>or</p>
+            {{!-- <button class="btn btn-outline-success" type="submit" id="signUp" onclick="signUp()">Sign Up</button> --}}
+            <a class="nav-link" type="submit" id="signUp" onclick="signUp()" href="/signup">Sign Up</a>
+            </form>
+        </div>    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/login.js"></script>
+    </nav>  
+    </header>
+
+
+    <div class="container text-center">
+        <br>
+            <h1>FIND THE PUP FOR YOUR PERSONALITY!</h1>
+        <br>
+        <div class="col s6 image">
+            <img src="/assets/img/dogs14.png" alt="Dog" class=".img-fluid. rounded max-width: 100%; height: auto">
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h3>We will help you match with the perfect dog for your personality!</h3>
+                <h4>Take this short quiz to get started!</h4>
+                <button class="btn btn-outline-warning" id="startQuiz" onclick="startQuiz()"><h4>Start Quiz!</h4></button>
+            </div>
+            {{!-- <div class="col-sm">
+                <h3>Already a member?</h3>
+                <h4>Log in here!</h4>
+                <button id="logIn" onclick="logIn()"><h1>Log In!</h1></button>
+            </div> --}}
+        </div>
+    </div>
+</main>

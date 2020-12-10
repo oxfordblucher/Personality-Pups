@@ -1,68 +1,54 @@
-{{!-- Sign Up Form to get results --}}
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+    <header>
+
+    <!-- Start sticky Navbar -->
+
+    <nav class="navbar sticky-top navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+              <p>Congratulations <span class="member-name"></span> you've found your matches!</p>
+            </a>
+            <form class="d-flex">
+             <a class="navbar-brand" href="/logout"><p>Logout</p></a>
+            </form>
+        </div>    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/login.js"></script>
+    </nav>  
+    </header>
+  
+<main>
+  <br>
+
+  {{!-- Matches container hidden until the user signs up --}}
+  <div class="card sm-6 card mt-5">
+  <div class="card-header"><span class="member-name"></span></p>'s Match Results</div>
+      <div class="card-body">
+      
+      <!-- Matches --> 
+      <div class="row">
+          <div class="col match">
+              <!-- Match 1 -->
+              <a class="col s3" href="https://www.akc.org/dog-breeds/{{breed}}/">Further Information on {{breed}}</a>
+              <a class="col s3" href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed}}">Find Adoptable {{breed}}s</a>
+              <img src={{breed}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+          </div>
+          </div>  
+          <div class="col match">
+              <!-- Match 2 -->
+              <a class="col s3" href="https://www.akc.org/dog-breeds/{{breed}}/">Further Information on {{breed}}</a>
+              <a class="col s3" href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed}}">Find Adoptable {{breed}}s</a>
+              <img src={{breed}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+          </div>
+      </div>  
+      <div class="col match">
+              <!-- Match 3 -->
+              <a class="col s3" href="https://www.akc.org/dog-breeds/{{breed}}/">Further Information on {{breed}}</a>
+              <a class="col s3" href= "https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed}}">Find Adoptable {{breed}}'s</a>
+              <img src={{breed}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
-        <br />
-        <p>Or log in <a href="/login">here</a></p>
-      </div>
-    </div>
+      </div>  
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
-
-
-{{!-- Matches container hidden until the user signs up --}}
-<div class="card sm-6 card mt-5 text-center hide" style="color: #6ea7d2; max-width: 40rem; border-color: #aac9e0;">
-<div class="card-header" style="background-color: #eaf6ff; text-align: left;">{{username}}'s Match Results</div>
-    <div class="card-body">
-    
-    <!-- Matches --> 
-    <div class="row">
-        <div class="col match">
-            <!-- Match 1 -->
-            <a class="col s3" style="color: #6ea7d2;" href="https://www.akc.org/dog-breeds/{{breed}}/">Further Information on {{breed}}</a>
-            <a class="col s3" style="color: #6ea7d2;" href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed}}">Find Adoptable {{breed}}s</a>
-            <img src={{breed}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
-        </div>
-        </div>  
-        <div class="col match">
-            <!-- Match 2 -->
-            <a class="col s3" style="color: #6ea7d2;" href="https://www.akc.org/dog-breeds/{{breed}}/">Further Information on {{breed}}</a>
-            <a class="col s3" style="color: #6ea7d2;" href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed}}">Find Adoptable {{breed}}s</a>
-            <img src={{breed}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
-        </div>
-    </div>  
-    <div class="col match">
-            <!-- Match 3 -->
-            <a class="col s3" style="color: #6ea7d2;" href="https://www.akc.org/dog-breeds/{{breed}}/">Further Information on {{breed}}</a>
-            <a class="col s3" style="color: #6ea7d2;" href= "https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed}}">Find Adoptable {{breed}}'s</a>
-            <img src={{breed}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
-    </div>
-    </div>  
-</div>
+</main>
 
 {{!-- 1. how to connect the api for the correct dog breed? update SRC
 2. how to connect the right breed with the right href link to the AKC website? Or add our own info...
