@@ -13,20 +13,7 @@ h1, h3{
   color: rgb(13, 13, 94);
 }
 
-button{
-  background: #0cc6cc;
-}
-
 .image{
   text-align: center;
-  padding-bottom: 50px;
-}
-
-.hide {
-  display: none;
-}
-
-.match{
-  align-content: center;
   padding-bottom: 50px;
 }

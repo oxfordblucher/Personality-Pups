@@ -1,6 +1,10 @@
 let keyArray = [];
 
 function startQuiz() {
+    localStorage.removeItem('pupQuiz');
+
+    localStorage.removeItem('suggestedPups');
+    
     window.location.replace('/question/0');
 };
 
@@ -38,4 +42,8 @@ function calculateResult() {
     let top3 = sorted.slice(0, 3);
 
     localStorage.setItem('suggestedPups', JSON.stringify(top3));
+}
+
+function logIn() {
+    window.location.replace('/login');
 }

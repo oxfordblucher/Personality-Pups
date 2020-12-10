@@ -34,5 +34,10 @@ module.exports = function(app) {
 
     app.get("/result", function(req, res) {
         res.render("results");
-    })
+    });
+
+    app.get("/login", function(req, res) {
+        res.render("login");
+    });
+
 };
