@@ -6,17 +6,12 @@ p {
   padding: 5px;
   margin: 5px;
   color: rgb(13, 13, 94);
-  /* background: #bdd1f5; */
 }
 
 h1, h3{
   text-align: center;
   color: rgb(13, 13, 94);
 }
-
-/* #next-question{
-  text-align: center;
-} */
 
 button{
   background: #0cc6cc;

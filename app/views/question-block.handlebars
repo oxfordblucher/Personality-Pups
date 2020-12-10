@@ -5,15 +5,14 @@
     <div class="col s6 image">
       <img src="/assets/img/dogs14.png" alt="Dog" class=".img-fluid. max-width: 100%; height: auto;">
     </div>
-    <row class="hide">
-      <div class="col-sm" id="next-question">
+    <div id="quiz">
+      <div class="col-sm" id={{id}}>
         <h3>{{question}}:</h3>
-        <button type="submit" id = {{options.optionA.keys}}>A: </button><p>{{options.optionA.name}}</p>
-        <button type="submit" id = {{options.optionA.keys}}>B: </button><p>{{options.optionB.name}}</p>
-        <button type="submit" id = {{options.optionA.keys}}>C: </button><p>{{options.optionC.name}}</p>
-
+        <button type="submit" onclick="answerQ({{json this}})" id = {{optionA.keys}}>A: <p>{{optionA.name}}</p></button>
+        <button type="submit" onclick="answerQ({{json this}})" id = {{optionB.keys}}>B: <p>{{optionB.name}}</p></button>
+        <button type="submit" onclick="answerQ({{json this}})" id = {{optionC.keys}}>C: <p>{{optionC.name}}</p></button>
       </div>
-    </row>
+    </div>
   </div>
 </main>
 
@@ -67,7 +66,7 @@
   </div>
 </nav>
   <div class="container">
-    <div class="row">
+    <div class="div">
       <div class="col-md-6 col-md-offset-3">
         <h2>Welcome <span class="member-name"></span></h2>
       </div>
@@ -85,20 +84,20 @@
     </div>
   </nav>
   <div class="container">
-    <div class="row">
+    <div class="div">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
+        <h2>Login div</h2>
+        <div class="login">
+          <div class="div-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+            <input type="email" class="div-control" id="email-input" placeholder="Email">
           </div>
-          <div class="form-group">
+          <div class="div-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+            <input type="password" class="div-control" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
+          <button type="submit" onclick="answerQ({{json this}})" class="btn btn-default">Login</button>
+        </div>
         <br />
         <p>Or sign up <a href="/">here</a></p>
       </div>
