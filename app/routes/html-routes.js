@@ -32,5 +32,12 @@ module.exports = function(app) {
         res.render("question-block", qObj)
     });
 
+    app.get("/results", function(req, res) {
+        res.render("results");
+    });
+
+    app.get("/signup", function(req, res) {
+        res.render("signUp");
+    });
 
 };

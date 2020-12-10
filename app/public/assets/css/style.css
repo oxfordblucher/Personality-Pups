@@ -5,21 +5,23 @@ body{
 p {
   padding: 5px;
   margin: 5px;
-  color: rgb(13, 13, 94);
+  color: #2db3b0;
+  text-emphasis: bold;
 }
 
-h1, h3{
+h1, h3, h5{
   text-align: center;
-  color: rgb(13, 13, 94);
+  color: #127775;
 }
 
 button{
-  background: #0cc6cc;
+  color: #2db3b0;
 }
 
 .image{
   text-align: center;
   padding-bottom: 50px;
+  padding-top: 20px;
 }
 
 .hide {
@@ -30,3 +32,70 @@ button{
   align-content: center;
   padding-bottom: 50px;
 }
+
+input{
+  margin-right: 20px;
+  font-weight: lighter;
+  color: #2db3b0;
+}
+
+nav{
+  background-color: #fff1a3;
+  /* font-weight: lighter; */
+  text-align: center;
+  color: #2db3b0;
+}
+
+#startQuiz{
+  background: #fff1a3;
+  color: #2db3b0;
+  padding: 25px;
+  margin: 10px;
+}
+
+.option, .signUpButton{
+  background: #fff1a3;
+  text-align: center;
+  color: #2db3b0;
+  margin: 5px;
+}
+
+.signUpBody{
+  align-content: center;
+}
+
+.loginButton{
+  color: #2db3b0;
+  box-shadow: #2db3b0;
+  border-color: #2db3b0;
+  border-width: 2px
+}
+
+a{
+  color: #2db3b0;
+}
+
+.card{
+  text-align: center;
+  color: #2db3b0; 
+  max-width: 40rem; 
+  border-color: #dacf35;
+  position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+.card-header{
+  background-color: #fff1a3; 
+  text-align: center;
+}
+
+/* .nav-link{
+ 
+}
+
+.loginButton{
+
+} */
