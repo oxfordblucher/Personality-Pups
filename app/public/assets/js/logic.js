@@ -9,9 +9,14 @@ function startQuiz() {
 
 
 function answerQ(data) {
-    const qNum = parseInt(data.qID);
+    const nextQ = parseInt(data.qID) + 1;
     const answrKeys = data.keys;
-    saveLocally(answrKeys);
+    /* saveLocally(answrKeys); */
+    if (nextQ < 14) {
+        window.location.replace(`/question/${nextQ}`);
+    } else {
+        window.location.replace('/result');
+    }
 };
 
 /* function SaveDataToLocalStorage(data)
@@ -26,10 +31,10 @@ function answerQ(data) {
     // Re-serialize the array back into a string and store it in localStorage
     localStorage.setItem('session', JSON.stringify(a));
 } */
-
+/* 
 function saveLocally(data) {
     let keyArray = [];
-    /* keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || []; */
+    keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || [];
     keyArray.push(data);
     localStorage.setItem('pupQuiz', JSON.stringify(keyArray));
-}
+} */

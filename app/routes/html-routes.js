@@ -29,8 +29,10 @@ module.exports = function(app) {
                 keys: questions.questions[req.params.number].options.optionC.keys
             }
         }
-        res.render("question-block", qObj)
+        res.render("question-block", qObj);
     });
 
-
+    app.get("/result", function(req, res) {
+        res.render("results");
+    })
 };
