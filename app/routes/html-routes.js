@@ -48,21 +48,12 @@ module.exports = function (app) {
 
     });
 
-<<<<<<< HEAD
-    app.get("/result", function (req, res) {
-        res.render("results");
-    });
-
-    app.get("/login", function (req, res) {
-        res.render("login");
-=======
     app.get("/results", function(req, res) {
         res.render("results");
     });
 
     app.get("/signup", function(req, res) {
         res.render("signUp");
->>>>>>> 71265197796f26411417bba5f807c285f8c33ac4
     });
 
 };
