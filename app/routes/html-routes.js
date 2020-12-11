@@ -1,7 +1,8 @@
 const db = require("../models/index");
 const path = require("path");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-const questions = require("../questions")
+const questions = require("../questions");
+const dogPics = require("../dogpics");
 
 module.exports = function(app) {
     
@@ -29,7 +30,7 @@ module.exports = function(app) {
                 keys: questions.questions[req.params.number].options.optionC.keys
             }
         }
-        res.render("question-block", qObj)
+        res.render("question-block", qObj);
     });
 
     app.get("/results", function(req, res) {

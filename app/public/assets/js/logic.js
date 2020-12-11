@@ -1,35 +1,49 @@
-const { JSON } = require("sequelize/types");
-
-const quiz = $("div#quiz");
+let keyArray = [];
 
 function startQuiz() {
+    localStorage.removeItem('pupQuiz');
+
+    localStorage.removeItem('suggestedPups');
+    
     window.location.replace('/question/0');
 };
 
-
-
 function answerQ(data) {
-    const qNum = parseInt(data.qID);
+    const nextQ = parseInt(data.qID) + 1;
     const answrKeys = data.keys;
+    
     saveLocally(answrKeys);
+
+    if (nextQ < 15) {
+        window.location.replace(`/question/${nextQ}`);
+    } else {
+        calculateResult();
+        window.location.replace('/result');
+    }
 };
 
-/* function SaveDataToLocalStorage(data)
-{
-    var a = [];
-    // Parse the serialized data back into an aray of objects
-    a = JSON.parse(localStorage.getItem('session')) || [];
-    // Push the new data (whether it be an object or anything else) onto the array
-    a.push(data);
-    // Alert the array value
-    alert(a);  // Should be something like [Object array]
-    // Re-serialize the array back into a string and store it in localStorage
-    localStorage.setItem('session', JSON.stringify(a));
-} */
-
 function saveLocally(data) {
-    let keyArray = [];
-    /* keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || []; */
-    keyArray.push(data);
-    localStorage.setItem('pupQuiz', JSON.stringify(keyArray));
+    keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || [];
+
+    const allAnswrs = keyArray.concat(data);
+
+    localStorage.setItem('pupQuiz', JSON.stringify(allAnswrs));
+}
+
+function calculateResult() {
+    keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || [];
+    let counts = keyArray.reduce((map, key) => {
+        map[key] = (map[key] || 0) + 1;
+        return map;
+    }, {});
+
+    let sorted = Object.keys(counts).sort((a,b) => counts[b] - counts[a]);
+
+    let top3 = sorted.slice(0, 3);
+
+    localStorage.setItem('suggestedPups', JSON.stringify(top3));
+}
+
+function logIn() {
+    window.location.replace('/login');
 }
