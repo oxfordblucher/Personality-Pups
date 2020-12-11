@@ -9,7 +9,7 @@ var config = require(__dirname + "/../config/config.js")[env];
 var db = {};
 
 if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+  var sequelize = new Sequelize(config.use_env_variable);
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
@@ -24,11 +24,11 @@ fs
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(function(modelName) {
+/* Object.keys(db).forEach(function(modelName) {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
-});
+}); */
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

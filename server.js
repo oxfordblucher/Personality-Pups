@@ -3,6 +3,9 @@
 // *********************************************************************************
 require('dotenv').config();
 const path = require("path");
+const passport = require("./app/config/passport");
+var session = require("express-session");
+
 
 // Dependencies
 // =============================================================
@@ -32,6 +35,10 @@ const hbs = exphbs.create({});
 hbs.handlebars.registerHelper('json', function(context) {
   return JSON.stringify(context);
 });
+
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
 // =============================================================

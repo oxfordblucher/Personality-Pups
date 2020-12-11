@@ -49,7 +49,11 @@ module.exports = function (app) {
     });
 
     app.get("/results", function(req, res) {
-        res.render("results");
+        const suggestedPups = JSON.parse(localStorage.getItem('suggestedPups'));
+        axios.get('/api/results').then(function(data) {
+            console.log(data.data);
+            res.render("results");
+        })
     });
 
     app.get("/signup", function(req, res) {
@@ -57,11 +61,3 @@ module.exports = function (app) {
     });
 
 };
-
-function getPic() {
-    axios.get('https://dog.ceo/api/breeds/image/random').then(function (data) {
-        console.log(data);
-        let picUrl = data.message;
-        return picUrl;
-    })
-}
