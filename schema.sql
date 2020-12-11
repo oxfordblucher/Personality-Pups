@@ -4,15 +4,32 @@ CREATE DATABASE `PersonalityPupDB`;
 
 USE `PersonalityPupDB`;
 
-CREATE TABLE users(
-id int auto_increment ,
-email varchar(30),
-password varchar(30),
-createdAt timestamp not null,
-updatedAt timestamp not null,
-primary key (id)
+CREATE TABLE dogs (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+	trait VARCHAR(200) NOT NULL,
+    picUrl VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id)
 );
 
-INSERT INTO users (email, password) VALUES ("artemishiu@gmail.com", "asdfasdf");
+CREATE TABLE results (
+    id INT AUTO_INCREMENT,
+    breed1 INT NOT NULL,
+    breed2 INT NOT NULL,
+    breed3 INT NOT NULL,
+    userId INT DEFAULT 000,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);
 
-SELECT * FROM USERS;
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    email VARCHAR(30) NOT NULL UNIQUE,
+    password VARCHAR(30) NOT NULL,
+    results INT,
+    FOREIGN KEY (results) REFERENCES results(id),
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);

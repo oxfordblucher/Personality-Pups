@@ -37,29 +37,18 @@ function calculateResult() {
     }, {});
 
     let sorted = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
-
     let top3 = sorted.slice(0, 3);
-
     localStorage.setItem('suggestedPups', JSON.stringify(top3));
-    console.log(top3);
-    storeResult(top3);
-}
-
-function logIn() {
-    window.location.replace('/login');
-}
-
-function storeResult(arr) {
-    console.log(arr)
+    
     $.post('/api/results', {
-        breed1: arr[0],
-        breed2: arr[1],
-        breed3: arr[2]
+        breed1: parseInt(top3[0]),
+        breed2: parseInt(top3[1]),
+        breed3: parseInt(top3[2])
     })
-        .then(function() {
-            window.location.replace('/results');
+        .then(function (data) {
+            console.log("Success!");
         })
-        .catch(function(err) {
+        .catch(function (err) {
             console.log(err);
-          });
+        });
 }
