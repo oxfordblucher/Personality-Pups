@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "deU(es96945",
+    "password": process.env.DB_password,
     "database": "PersonalityPupDB",
     "host": "127.0.0.1",
     "port": 3306,
