@@ -37,6 +37,7 @@ hbs.handlebars.registerHelper('json', function(context) {
 // =============================================================
 require("./app/routes/results-api-routes.js")(app);
 require("./app/routes/user-api-routes.js")(app);
+require("./app/routes/dogs-api-routes.js")(app);
 require("./app/routes/html-routes.js")(app);
 
 // Starts the server to begin listening
