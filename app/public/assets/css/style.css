@@ -89,6 +89,10 @@ a{
   text-align: center;
 }
 
+.dogPic{
+  max-width: 400px;
+}
+
 /* .nav-link{
  
 }
