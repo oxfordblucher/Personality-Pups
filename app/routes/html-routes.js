@@ -33,12 +33,12 @@ module.exports = function(app) {
         res.render("question-block", qObj);
     });
 
-    app.get("/result", function(req, res) {
+    app.get("/results", function(req, res) {
         res.render("results");
     });
 
-    app.get("/login", function(req, res) {
-        res.render("login");
+    app.get("/signup", function(req, res) {
+        res.render("signUp");
     });
 
 };
