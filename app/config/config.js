@@ -9,7 +9,7 @@ module.exports = {
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": process.env.DB_password,
     "database": "PersonalityPupDB",
     "host": "127.0.0.1",
     "port": 3306,

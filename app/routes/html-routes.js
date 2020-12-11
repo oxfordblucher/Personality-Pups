@@ -49,8 +49,7 @@ module.exports = function (app) {
     });
 
     app.get("/results", function(req, res) {
-        const suggestedPups = JSON.parse(localStorage.getItem('suggestedPups'));
-        axios.get('/api/results').then(function(data) {
+        axios.get('/api/results/0').then(function(data) {
             console.log(data.data);
             res.render("results");
         })

@@ -1,5 +1,5 @@
 // Requiring our models and passport as we've configured it
-// ****REMOVE INDEX FROM MODELS??
+
 const db = require("../models/index");
 const passport = require("../config/passport");
 

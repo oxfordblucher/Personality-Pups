@@ -1,11 +1,11 @@
 // *********************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
 // *********************************************************************************
-require('dotenv').config();
 const path = require("path");
 const passport = require("./app/config/passport");
 var session = require("express-session");
 
+require('dotenv').config();
 
 // Dependencies
 // =============================================================
@@ -32,7 +32,7 @@ app.set("view engine", "handlebars");
 
 const hbs = exphbs.create({});
 
-hbs.handlebars.registerHelper('json', function(context) {
+hbs.handlebars.registerHelper('json', function (context) {
   return JSON.stringify(context);
 });
 
@@ -49,6 +49,6 @@ require("./app/routes/html-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("App listening on http://localhost:" + PORT);
 });
