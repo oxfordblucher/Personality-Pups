@@ -49,9 +49,25 @@ module.exports = function (app) {
     });
 
     app.get("/results/:id1/:id2/:id3", function (req, res) {
-        axios.get(`api/dogs/${req.params.id1}/${req.params.id2}/${req.params.id3}`).then(function (dataInfo) {
+        console.log(req.params);
+
+        db.dog.findAll({
+            where: {id: [req.params.id1, req.params.id2, req.params.id3]}
+          }).then(function (dbResult) {
+            console.log(dbResult);
+            const resultObj = {
+                breed1: dbResult[0].name,
+                breed2: dbResult[1].name,
+                breed3: dbResult[2].name,
+                trait1: dbResult[0].trait,
+                trait2: dbResult[1].trait,
+                trait3: dbResult[2].trait,
+                pic1: dbResult[0].picUrl,
+                pic2: dbResult[1].picUrl,
+                pic3: dbResult[2].picUrl
+            }
             res.render("results");
-        })
+          });
         
     })
 
