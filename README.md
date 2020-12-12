@@ -6,6 +6,7 @@ the app uses Node and MySQL to query and route data and Handlebars to generate H
 [Personality-Pup](https://github.com/oxfordblucher/Project-2-Untitled)
 
 ![Demo](public/assets/img/personalitypup.png)
+![Demo](public/assets/img/personalitypupsignup.png)
 
 #### Table of Contents
 
