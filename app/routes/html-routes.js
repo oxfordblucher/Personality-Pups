@@ -54,7 +54,7 @@ module.exports = function (app) {
         db.dog.findAll({
             where: {id: [req.params.id1, req.params.id2, req.params.id3]}
           }).then(function (dbResult) {
-            console.log(dbResult);
+
             const resultObj = {
                 breed1: dbResult[0].name,
                 breed2: dbResult[1].name,

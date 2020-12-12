@@ -31,7 +31,7 @@ $(document).ready(function() {
       .then(function(data) {
         $.get(`/api/results/${data.results}`).then(function (userResults) {
           console.log(userResults);
-          window.location.href = `/results/${userResults.breed1}/${userResults.breed2}/${userResults.breed3}`;
+          window.location.replace(`/results/${userResults.breed1}/${userResults.breed2}/${userResults.breed3}`);
         })
 
         // If there's an error, log the error

@@ -12,7 +12,7 @@
             </form>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/assets/js/login.js"></script>
+        <script type="text/javascript" src="/assets/js/resultspage.js"></script>
     </nav>
 </header>
 
@@ -31,38 +31,38 @@
                 <div class="col match">
                     
                     <!-- Match 1 -->
-                    <a class="col s3" href="https://www.akc.org/dog-breeds/{{result1}}/">Further Information on
+                    <a class="col s3" href="https://www.akc.org/dog-breeds/{{breed1}}/">Further Information on
                         {{breed1}}</a>
                     <a class="col s3"
-                        href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result1}}">Find
+                        href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed1}}">Find
                         Adoptable {{breed1}}s</a>
                     <figure>
-                        <img src={{pic1}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                        <img id="pic1" src={{pic1}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
                         <figcaption> {{trait1}} </figcaption>
                     </figure>
                 </div>
             </div>
             <div class="col match">
                 <!-- Match 2 -->
-                <a class="col s3" href="https://www.akc.org/dog-breeds/{{result2}}/">Further Information on
+                <a class="col s3" href="https://www.akc.org/dog-breeds/{{breed2}}/">Further Information on
                     {{breed2}}</a>
                 <a class="col s3"
-                    href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result2}}">Find
+                    href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed2}}">Find
                     Adoptable {{breed2}}s</a>
                 <figure>
-                    <img src={{pic2}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                    <img id="pic2" src={{pic2}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
                     <figcaption> {{trait2}} </figcaption>
                 </figure>
             </div>
         </div>
         <div class="col match">
             <!-- Match 3 -->
-            <a class="col s3" href="https://www.akc.org/dog-breeds/{{result3}}/">Further Information on {{breed3}}</a>
+            <a class="col s3" href="https://www.akc.org/dog-breeds/{{breed3}}/">Further Information on {{breed3}}</a>
             <a class="col s3"
-                href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result3}}">Find
+                href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{breed3}}">Find
                 Adoptable {{breed3}}'s</a>
             <figure>
-                <img src={{pic3}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                <img id="pic3" src={{pic3}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
                 <figcaption> {{trait3}} </figcaption>
             </figure>
         </div>
