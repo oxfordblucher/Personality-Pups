@@ -11,7 +11,7 @@ p {
   text-emphasis: bold;
 }
 
-h3, h5{
+h3, h4, h5{
   text-align: center;
   color: #127775;
 }
@@ -26,7 +26,7 @@ button{
   color: #2db3b0;
 }
 
-.dogPic{
+image, .dogPic{
   max-width: 400px;
   border-radius: 25px;
   border: 8px double #dacf35;
@@ -71,7 +71,7 @@ nav{
   align-content: center;
 }
 
-.loginButton{
+.loginButton, .signUpButton{
   color: #2db3b0;
   box-shadow: #2db3b0;
   border-color: #2db3b0;
@@ -102,4 +102,15 @@ a{
 figcaption{
   font-size: larger;
   color: black;
+}
+
+.jumbotron{
+  border-radius: 25px;
+  border: 8px double #dacf35;
+  text-align: center;
+  background: #fff1a3;
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; */
 }
