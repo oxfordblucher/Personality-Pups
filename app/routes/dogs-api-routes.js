@@ -18,6 +18,7 @@ module.exports = function (app) {
     db.dog.findAll({
       where: {id: [req.params.id1, req.params.id2, req.params.id3]}
     }).then(function (dbResult) {
+      console.log(dbResult);
       res.json(dbResult);
     });
   });
