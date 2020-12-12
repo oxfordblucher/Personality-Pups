@@ -1,9 +1,9 @@
 let keyArray = [];
 
 function startQuiz() {
-    localStorage.removeItem('pupQuiz');
+    sessionStorage.removeItem('pupQuiz');
 
-    localStorage.removeItem('suggestedPups');
+    sessionStorage.removeItem('suggestedPups');
 
     window.location.replace('/question/0');
 };
@@ -22,15 +22,15 @@ function answerQ(data) {
 };
 
 function saveLocally(data) {
-    keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || [];
+    keyArray = JSON.parse(sessionStorage.getItem('pupQuiz')) || [];
 
     const allAnswrs = keyArray.concat(data);
 
-    localStorage.setItem('pupQuiz', JSON.stringify(allAnswrs));
+    sessionStorage.setItem('pupQuiz', JSON.stringify(allAnswrs));
 }
 
 function calculateResult() {
-    keyArray = JSON.parse(localStorage.getItem('pupQuiz')) || [];
+    keyArray = JSON.parse(sessionStorage.getItem('pupQuiz')) || [];
     let counts = keyArray.reduce((map, key) => {
         map[key] = (map[key] || 0) + 1;
         return map;
@@ -38,15 +38,16 @@ function calculateResult() {
 
     let sorted = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
     let top3 = sorted.slice(0, 3);
-    localStorage.setItem('suggestedPups', JSON.stringify(top3));
-    
+    sessionStorage.setItem('suggestedPups', JSON.stringify(top3));
+
     $.post('/api/results', {
         breed1: parseInt(top3[0]),
         breed2: parseInt(top3[1]),
         breed3: parseInt(top3[2])
     })
-        .then(function (data) {
-            console.log("Success!");
+        .then(function (newResultId) {
+            sessionStorage.setItem('unsavedResultId', JSON.stringify(newResultId));
+            window.location.replace('/signup');
         })
         .catch(function (err) {
             console.log(err);

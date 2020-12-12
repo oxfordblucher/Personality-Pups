@@ -1,11 +1,10 @@
+require('dotenv').config();
 // *********************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
 // *********************************************************************************
 const path = require("path");
 const passport = require("./app/config/passport");
 var session = require("express-session");
-
-require('dotenv').config();
 
 // Dependencies
 // =============================================================
@@ -15,6 +14,7 @@ var express = require("express");
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+var db = require('./app/models');
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -49,6 +49,9 @@ require("./app/routes/html-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function () {
-  console.log("App listening on http://localhost:" + PORT);
+// Syncing our database and logging a message to the user upon success
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+  });
 });

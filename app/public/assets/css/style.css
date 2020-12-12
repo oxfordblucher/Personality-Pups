@@ -98,3 +98,8 @@ a{
   background-color: #fff1a3; 
   text-align: center;
 }
+
+figcaption{
+  font-size: larger;
+  color: black;
+}

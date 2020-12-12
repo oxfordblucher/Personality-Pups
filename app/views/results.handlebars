@@ -1,50 +1,73 @@
-    <header>
+<header>
     <!-- Start sticky Navbar -->
     <nav class="navbar sticky-top navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand">
-              <p>Congratulations <span class="member-name"></span> you've found your matches!</p>
+                <p>Congratulations <span class="member-name"></span> you've found your matches!</p>
             </a>
             <form class="d-flex">
-             <a class="navbar-brand" href="/logout"><p>Logout</p></a>
+                <a class="navbar-brand" href="/logout">
+                    <p>Logout</p>
+                </a>
             </form>
-        </div>    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script type="text/javascript" src="assets/js/login.js"></script>
-    </nav>  
-    </header>
-  
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/js/login.js"></script>
+    </nav>
+</header>
+
 <main>
-  <br>
-  {{!-- Matches container hidden until the user signs up --}}
-  <div class="card sm-6 card mt-5">
-  <div class="card-header"><span class="member-name"></span></p>'s Match Results</div>
-      <div class="card-body">
-      
-      <!-- Matches --> 
-      <div class="row">
-          <div class="col match">
-              <!-- Match 1 -->
-              <a class="col s3" href="https://www.akc.org/dog-breeds/{{result1}}/">Further Information on {{result1}}</a>
-              <a class="col s3" href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result1}}">Find Adoptable {{result1}}s</a>
-              <img src={{result1}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
-          </div>
-          </div>  
-          <div class="col match">
-              <!-- Match 2 -->
-              <a class="col s3" href="https://www.akc.org/dog-breeds/{{result2}}/">Further Information on {{bresult2}}</a>
-              <a class="col s3" href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result2}}">Find Adoptable {{result2}}s</a>
-              <img src={{result2}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
-          </div>
-      </div>  
-      <div class="col match">
-              <!-- Match 3 -->
-              <a class="col s3" href="https://www.akc.org/dog-breeds/{{result3}}/">Further Information on {{result3}}</a>
-              <a class="col s3" href= "https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result3}}">Find Adoptable {{result3}}'s</a>
-              <img src={{result3}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
-      </div>
-      </div>  
-  </div>
+    <br>
+    <br>
+                    <br>
+                    <br>
+    {{!-- Matches container hidden until the user signs up --}}
+    <div class="card sm-6 card mt-5">
+        <div class="card-header"><span class="member-name"></span></p>'s Match Results</div>
+        <div class="card-body">
+
+            <!-- Matches -->
+            <div class="row">
+                <div class="col match">
+                    
+                    <!-- Match 1 -->
+                    <a class="col s3" href="https://www.akc.org/dog-breeds/{{result1}}/">Further Information on
+                        {{breed1}}</a>
+                    <a class="col s3"
+                        href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result1}}">Find
+                        Adoptable {{breed1}}s</a>
+                    <figure>
+                        <img src={{pic1}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                        <figcaption> {{trait1}} </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col match">
+                <!-- Match 2 -->
+                <a class="col s3" href="https://www.akc.org/dog-breeds/{{result2}}/">Further Information on
+                    {{breed2}}</a>
+                <a class="col s3"
+                    href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result2}}">Find
+                    Adoptable {{breed2}}s</a>
+                <figure>
+                    <img src={{pic2}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                    <figcaption> {{trait2}} </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col match">
+            <!-- Match 3 -->
+            <a class="col s3" href="https://www.akc.org/dog-breeds/{{result3}}/">Further Information on {{breed3}}</a>
+            <a class="col s3"
+                href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result3}}">Find
+                Adoptable {{breed3}}'s</a>
+            <figure>
+                <img src={{pic3}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                <figcaption> {{trait3}} </figcaption>
+            </figure>
+        </div>
+    </div>
+    </div>
 </main>
 
 {{!-- 1. how to connect the api for the correct dog breed? update SRC
