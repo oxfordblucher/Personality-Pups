@@ -29,9 +29,11 @@ $(document).ready(function() {
       password: password
     })
       .then(function(data) {
-        /* window.location.replace("/members"); */
+        $.get(`/api/results/${data.results}`).then(function (userResults) {
+          console.log(userResults);
+        })
+
         // If there's an error, log the error
-        console.log(data);
       })
       .catch(function(err) {
         console.log(err);
