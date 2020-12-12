@@ -66,7 +66,7 @@ module.exports = function (app) {
                 pic2: dbResult[1].picUrl,
                 pic3: dbResult[2].picUrl
             }
-            res.render("results");
+            res.render("results", resultObj);
           });
         
     })
