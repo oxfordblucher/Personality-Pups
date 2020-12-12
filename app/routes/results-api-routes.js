@@ -39,6 +39,7 @@ module.exports = function (app) {
         })
         .then(function(updatedRows) {
           console.log(updatedRows);
+          res.json(updatedRows);
         })
       }
     })

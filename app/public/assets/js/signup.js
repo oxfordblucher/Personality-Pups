@@ -42,7 +42,9 @@ $(document).ready(function () {
           }
         })
         .then(function() {
-          window.location.replace("/");
+          const currentUserRes = JSON.parse(sessionStorage.getItem('suggestedPups'));
+          console.log(currentUserRes);
+          window.location.replace(`/results/${currentUserRes[0]}/${currentUserRes[1]}/${currentUserRes[2]}`);
         })
       })
 
