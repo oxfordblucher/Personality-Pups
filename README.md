@@ -3,9 +3,11 @@ This site asks the user a series of fun questions to generate three dog breed ma
 
 the app uses Node and MySQL to query and route data and Handlebars to generate HTML
 
-[Personality-Pup](https://github.com/oxfordblucher/Project-2-Untitled)
+[Personality-Pup Repo](https://github.com/oxfordblucher/Project-2-Untitled)
+[Personality-Pup Deployed](https://personality-pups.herokuapp.com)
 
-![Demo](public/assets/img/personalitypup.png)
+![Demo](public/assets/img/personalitypuplogin.png)
+![Demo](public/assets/img/personalitypupquiz.png)
 
 #### Table of Contents
 
@@ -19,6 +21,8 @@ the app uses Node and MySQL to query and route data and Handlebars to generate H
 8. [Questions](#questions)
 
 #### Project Description
+
+* Our application is a fun buzzfeed-style personality quiz to help people find dog breeds that are good matches for their personality and lifestyle. 
 
 * This project uses Node and MySQL to query and route data to render an HTML webpage that displays user generated dog breed match results based on the answers to personality questions.
 
