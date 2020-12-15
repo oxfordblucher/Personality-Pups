@@ -6,8 +6,8 @@ the app uses Node and MySQL to query and route data and Handlebars to generate H
 [Personality-Pup Repo](https://github.com/oxfordblucher/Project-2-Untitled)
 [Personality-Pup Deployed](https://personality-pups.herokuapp.com)
 
-![Demo](public/assets/img/personalitypuplogin.png)
-![Demo](public/assets/img/personalitypupquiz.png)
+![Demo](app/public/assets/img/personalitypuplogin.png)
+![Demo](app/public/assets/img/personalitypupquiz.png)
 
 #### Table of Contents
 
@@ -54,7 +54,7 @@ node server.js
 
 * licensed under the [MIT License](Develop/LICENSE.txt)
 
-#### Questions
+#### Collaborators
 
 * [Jarrett William's GitHub Page](https://github.com/JWilliams0204)
 * jarrett0204@gmail.com
