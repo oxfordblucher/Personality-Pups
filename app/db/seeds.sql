@@ -1,3 +1,15 @@
+USE `PersonalityPupDB`;
+
+CREATE TABLE dogs(
+	id INT AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    trait VARCHAR(200) NOT NULL,
+    picUrl VARCHAR(100) NOT NULL,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+);
+
 INSERT INTO dogs (id, name, trait, picUrl) VALUES
     ("1", "Labrador Retriever", "Friendly, loyal and ready to retrieve birds on the hunt or fetch for hours!", "http://dog.ceo/api/breed/labrador/images/random"),
     ("2", "German Shepherd", "Smart, alert and protective. This pup is ready to protect the pack!", "http://dog.ceo/api/breed/germanshepherd/images/random"),
