@@ -36,6 +36,16 @@ image, .dogPic{
   width: 50%;
 }
 
+#resultImage1, #resultImage2, #resultImage3{
+  max-width: 400px;
+  border-radius: 25px;
+  border: 8px double #dacf35;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .match{
   align-content: center;
   padding-bottom: 50px;
@@ -86,7 +96,9 @@ a{
   text-align: center;
   color: #2db3b0; 
   max-width: 40rem; 
-  border-color: #dacf35;
+  border-radius: 25px;
+  border: 8px double #dacf35;
+  background: #fff1a3;
   position: absolute;
         top: 40%;
         left: 50%;
