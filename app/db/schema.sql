@@ -14,7 +14,7 @@ CREATE TABLE dogs (
     PRIMARY KEY(id)
 );
 
-CREATE TABLE results (
+CREATE TABLE Results (
     id INT AUTO_INCREMENT,
     breed1 INT NOT NULL,
     breed2 INT NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE results (
     PRIMARY KEY(id)
 );
 
-CREATE TABLE users (
+CREATE TABLE Users (
     id INT AUTO_INCREMENT,
     email VARCHAR(30) NOT NULL UNIQUE,
     password VARCHAR(60) NOT NULL,

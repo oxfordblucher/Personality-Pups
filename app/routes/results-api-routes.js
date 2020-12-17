@@ -30,7 +30,7 @@ module.exports = function (app) {
   });
 
   app.put("/api/results/", function (req, res) {
-    db.Result.findOne({ where: { userId: 0}})
+    db.Result.findOne({ where: { userId: null}})
     .then(function (result) {
       console.log(result);
       if (result) {

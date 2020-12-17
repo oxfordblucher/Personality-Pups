@@ -19,8 +19,8 @@
 <main>
     <br>
     <br>
-                    <br>
-                    <br>
+    <br>
+    <br>
     {{!-- Matches container hidden until the user signs up --}}
     <div class="card sm-6 card mt-5">
         <div class="card-header"><span class="member-name"></span></p>'s Match Results</div>
@@ -29,7 +29,7 @@
             <!-- Matches -->
             <div class="row">
                 <div class="col match">
-                    
+
                     <!-- Match 1 -->
                     <a class="col s3" href="https://www.akc.org/dog-breeds/{{result1}}/">Further Information on
                         {{breed1}}</a>
@@ -37,7 +37,8 @@
                         href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result1}}">Find
                         Adoptable {{breed1}}s</a>
                     <figure>
-                        <img src={{pic1}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                        <img id="resultImg1" src={{pic1}} alt="Dog Breed Result"
+                            class=".img-fluid. max-width: 100%; height: auto;">
                         <figcaption> {{trait1}} </figcaption>
                     </figure>
                 </div>
@@ -50,7 +51,8 @@
                     href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result2}}">Find
                     Adoptable {{breed2}}s</a>
                 <figure>
-                    <img src={{pic2}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                    <img id="resultImg2" src={{pic2}} alt="Dog Breed Result"
+                        class=".img-fluid. max-width: 100%; height: auto;">
                     <figcaption> {{trait2}} </figcaption>
                 </figure>
             </div>
@@ -62,7 +64,8 @@
                 href="https://www.petfinder.com/search/dogs-for-adoption/us/pa/19143/?breed%5B0%5D={{result3}}">Find
                 Adoptable {{breed3}}'s</a>
             <figure>
-                <img src={{pic3}} alt="Dog Breed Result" class=".img-fluid. max-width: 100%; height: auto;">
+                <img id="resultImg3" src={{pic3}} alt="Dog Breed Result"
+                    class=".img-fluid. max-width: 100%; height: auto;">
                 <figcaption> {{trait3}} </figcaption>
             </figure>
         </div>
