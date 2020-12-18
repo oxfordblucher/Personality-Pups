@@ -26,7 +26,7 @@ button{
   color: #2db3b0;
 }
 
-image, .dogPic{
+image, .dogPic, .img{
   max-width: 400px;
   border-radius: 25px;
   border: 8px double #dacf35;
@@ -36,7 +36,7 @@ image, .dogPic{
   width: 50%;
 }
 
-#resultImage1, #resultImage2, #resultImage3{
+#resultImg1, #resultImg2, #resultImg3{
   max-width: 400px;
   border-radius: 25px;
   border: 8px double #dacf35;
@@ -93,6 +93,7 @@ a{
 }
 
 .card{
+  padding-top: 1400px;
   text-align: center;
   color: #2db3b0; 
   max-width: 40rem; 
@@ -113,7 +114,7 @@ a{
 
 figcaption{
   font-size: larger;
-  color: black;
+  color: #2db3b0;
 }
 
 .jumbotron{
