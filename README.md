@@ -7,7 +7,7 @@ the app uses Node and MySQL to query and route data and Handlebars to generate H
 [Personality-Pup Deployed](https://personality-pups.herokuapp.com)
 
 ![Demo](app/public/assets/img/personalitypuplogin.png)
-![Demo](app/public/assets/img/personalitypupquiz.png)
+![Demo](app/public/assets/img/screenshot.png)
 
 #### Table of Contents
 
